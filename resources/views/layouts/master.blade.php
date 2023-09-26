@@ -12,7 +12,7 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">Logo</div>
+        <img src="{{ asset('images/women.png') }}" alt="" width="50" height="50">
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Acerca de</a></li>
@@ -34,10 +34,16 @@
                     <x-responsive-nav-link :href="route('profile.edit')">
                         {{ __('Perfil') }}
                     </x-responsive-nav-link></a></li>
-
         </ul>
     </nav>
 
 
+
+
+
+
+
+
 </body>
+
 </html>
