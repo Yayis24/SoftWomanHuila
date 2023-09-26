@@ -18,46 +18,26 @@
             <li><a href="#">Acerca de</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
-        </ul>
+            <li><a href="#">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
 
-            <!-- Responsive Settings Options -->
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-    
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-    
-                    <x-responsive-nav-link :href="route('logout')"
-                        onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
+                        <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                            {{ __('Cerrar sesion') }}
+                        </x-responsive-nav-link>
+                    </form>
+                </a>
+            </li>
+            <li><a href="#">
+                    <x-responsive-nav-link :href="route('profile.edit')">
+                        {{ __('Perfil') }}
+                    </x-responsive-nav-link></a></li>
+
+        </ul>
     </nav>
 
-    <!-- Responsive Settings Options -->
-        <div class="mt-3 space-y-1">
-            <x-responsive-nav-link :href="route('profile.edit')">
-                {{ __('Profile') }}
-            </x-responsive-nav-link>
-
-            <!-- Authentication -->
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-
-                <x-responsive-nav-link :href="route('logout')"
-                    onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                    {{ __('Log Out') }}
-                </x-responsive-nav-link>
-            </form>
-        </div>
 
 </body>
-
 </html>
-
