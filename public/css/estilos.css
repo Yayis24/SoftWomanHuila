@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(224, 220, 220);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav{
+    width: 300px;
+}
+
+.nav__link{
+    color: rgb(43, 43, 34);
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(151, 147, 153);
+}
+
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align:center;
+    overflow: hidden;
+    margin-top: 15px;
+
+}
+
+.list__item--click{
+    cursor: pointer;
+}
+
+.list__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.list__button:hover{
+    background: rgb(212, 210, 210);
+    border-radius: 5px;
+
+}
+
+/* Agrega estos estilos para centrar el logo en la parte superior */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Puedes ajustar esto para agregar espacio alrededor del logo */
+
+}
+
+/* Agrega estos estilos para el botón de salida */
+.logout-button {
+    background: none;
+    border: none;
+    color: inherit; /* Hereda el color del texto del elemento padre */
+    font: inherit; /* Hereda la fuente del elemento padre */
+    cursor: pointer;
+    text-decoration: none; /* Puedes agregar o quitar subrayado según tu preferencia */
+}
+
