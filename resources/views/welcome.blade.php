@@ -51,7 +51,11 @@
                 </a>
             </li> --}}
     </ul>
-</nav> <br>
+</nav>
+<div class="container1" id="image">
+    <img src="{{ asset('images/image.jpg') }}" alt="">
+</div>
+
 
 <main class="container">
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">

@@ -6,7 +6,7 @@ body {
 }
 
 .navbar {
-    background-color: #bb7e7a;
+    background-color: #3f7950;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -60,3 +60,7 @@ footer{
     font-size: 22px;
 }
 
+#image{
+    clip-path: polygon(49% 24%, 100% 38%, 99% 0, 0 0, 0 37%);
+    width: 100%;
+}
