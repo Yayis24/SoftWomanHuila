@@ -9,4 +9,9 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    public function solicitudservicies()
+    {
+        return view('solicituddeservicio'); // retornar la vista que quiero mostrar
+    }
 }

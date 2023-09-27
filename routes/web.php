@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,5 +34,6 @@ Route::middleware('auth')->group(function () {
 
 
 });
+Route::get('/solicitud/servicies', [Controller::class, 'solicitudservicies'])->name('solicitud.servicies');
 
 require __DIR__.'/auth.php';

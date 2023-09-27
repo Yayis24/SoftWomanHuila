@@ -1,0 +1,126 @@
+/* Estilo del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto principal */
+    background-color: #f2f2f2; /* Color de fondo del cuerpo */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Estilo para el encabezado (h1) */
+h1 {
+    text-align: center; /* Alinea el texto al centro */
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    padding: 20px; /* Espacio de relleno en el encabezado */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 80%; /* Ancho de la tabla */
+    margin: 20px auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Colapsa los bordes de las celdas */
+    background-color: #fff; /* Color de fondo de la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra de la tabla */
+}
+
+/* Estilos para celdas de la tabla (th y td) */
+table, th, td {
+    border: 1px solid #ddd; /* Borde de las celdas */
+}
+
+th, td {
+    padding: 15px; /* Espacio de relleno en celdas */
+    text-align: left; /* Alinea el texto a la izquierda en celdas */
+}
+
+/* Estilo para las celdas del encabezado (th) */
+th {
+    background-color: #333; /* Color de fondo de las celdas del encabezado */
+    color: #fff; /* Color del texto en celdas del encabezado */
+}
+
+/* Estilo para filas pares de la tabla */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo de filas pares */
+}
+
+/* Estilo para el botón "my-button" */
+.my-button {
+    background-color: #1c9626; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en el botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 10px; /* Espacio de relleno en el botón */
+    border-radius: 5px; /* Redondeo de los bordes del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima de botón */
+}
+
+/* Estilo de botón "my-button" al pasar el cursor (hover) */
+.my-button:hover {
+    background-color: #1db643; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilo para el botón "my-button1" */
+.my-button1 {
+    background-color: #ac150a; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en el botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 10px; /* Espacio de relleno en el botón */
+    border-radius: 5px; /* Redondeo de los bordes del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima de botón */
+}
+
+/* Estilo de botón "my-button1" al pasar el cursor (hover) */
+.my-button1:hover {
+    background-color: #ee0c0c; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para el contenedor del mapa */
+.map-container {
+    position: relative; /* Posición relativa */
+    text-align: right; /* Alinea el contenido a la derecha */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    height: 560px; /* Altura del contenedor del mapa */
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+}
+
+/* Estilo para el mapa de Google */
+.map-container iframe {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    border: none; /* Elimina el borde del mapa de Google */
+}
+
+/* Estilos para el enlace a Google Maps */
+.mapouter a {
+    text-decoration: none; /* Puedes agregar más estilos según sea necesario */
+}
+
+/* Estilos para el contenedor .gmap_canvas */
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 560px;
+    width: 820px;
+}
+
+/* Estilo para el título del mapa */
+.map-title {
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Cambia el color del texto a blanco */
+    font-size: 28px; /* Aumenta el tamaño de fuente */
+    margin-top: 20px; /* Margen superior para separar del mapa */
+    background-color: #333; /* Cambia el fondo del título para hacerlo más visible */
+    padding: 10px; /* Añade un espacio de relleno al título */
+}
+ /* Estilos para la tarjeta */
+ .tarjeta {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
