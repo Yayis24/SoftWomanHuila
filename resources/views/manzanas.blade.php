@@ -32,6 +32,7 @@
                 <td>Ciudad de chapinero</td>
                 <td>
                     <button class="my-button1">Eliminar</button>
+                    <button class="my-buttoneditar">Editar</button>
                 </td>
             </tr>
             <!-- Agrega más filas según sea necesario -->
@@ -43,28 +44,27 @@
             <i class="fas fa-times cerrar" onclick="closeModal()"></i>
             <h2>Agregar Solicitud de Servicio</h2>
             <form id="formularioAgregar">
-                <label for="manzana">Manzana:</label>
-                <input type="text" id="manzana" name="manzana" required>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
                 <label for="Codigo">Codigo:</label>
-                <input type="text" id="codigo" name="servicio" required>
+                <input type="text" id="codigo" name="codigo" required>
                 <label for="Nombre">Nombre</label>
-                <input type="text" id="nombre" name="fecha" required>
-                <label for="estado">Estado:</label>
+                <input type="text" id="nombre" name="nombre" required>
                 <button type="submit" class="my-button">Guardar</button>
-            </div>
-            </form>
         </div>
+        </form>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script>
         function openModal() {
@@ -83,23 +83,33 @@
             closeModal();
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            $('#solicitudTable').DataTable({
-                responsive: true,
-                dom: 'lfrtipB',
-                buttons: [
-                    //Botón para PDF
-                    {
-                        extend: 'pdf',
-                        title: 'Archivo PDF',
-                        text: '<button class="btn btn-danger">Exportar a PDF <i class="far fa-file-pdf"></i></button>'
+  <script>
+    $(document).ready(function() {
+        $('#solicitudTable').DataTable({
+            responsive: true,
+            dom: 'lfrtipB',
+            buttons: [
+                // Botón para PDF
+                {
+                    extend: 'pdf',
+                    title: 'Archivo PDF',
+                    text: 'Exportar a PDF',
+                    className: 'btn btn-danger pdf-button',
+                    customize: function(doc) {
+                        // Ocultar las columnas en el PDF
+                        doc.content[1].table.body.forEach(function(row) {
+                            row.splice(0, 1); // Elimina la primera columna (ID)
+                            row.splice(-1, 1); // Elimina la última columna (Acciones)
+                        });
                     }
-                ]
-            });
+                }
+            ]
         });
-    </script>
+    });
+</script>
+
+
+
 </body>
 
 </html>
-

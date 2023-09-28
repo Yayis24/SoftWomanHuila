@@ -46,3 +46,23 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2; /* Color de fondo de filas pares */
 } 
+
+/* Estilos para el contenedor del botón PDF */
+.dataTables_wrapper .pdf-button-container {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    margin-bottom: 20px; /* Espacio inferior para separar del encabezado de la tabla */
+}
+
+/* Estilos para el botón de PDF */
+.pdf-button {
+    background-color: #ff3333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pdf-button:hover {
+    background-color: #ff6600; /* Color de fondo al pasar el mouse */
+}
