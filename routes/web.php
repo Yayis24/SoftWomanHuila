@@ -29,10 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/solicitud/servicies', [Controller::class, 'solicitudservicies'])->name('solicitud.servicies');
-Route::get('/manzanas', [Controller::class, 'manzanas'])->name('manzanas');
+Route::get('/servicerequest', [Controller::class, 'servicerequest'])->name('servicerequest');
+Route::get('/apple', [Controller::class, 'apple'])->name('apple');
 Route::get('/category', [ServiceCategoryController::class, 'category'])->name('category');
-Route::get('/establecimientos', [Controller::class, 'establecimientos'])->name('establecimientos');
+Route::get('/establishment', [Controller::class, 'establishment'])->name('establishment');
 
 
 require __DIR__ . '/auth.php';

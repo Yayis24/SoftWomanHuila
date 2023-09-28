@@ -31,7 +31,7 @@
             </div>
             {{-- Elementos de lista de la barra de navegacion --}}
             <ul class="nav__link nav__link--menu">
-                <li class="nav__items"><a href="{{route('manzanas')}}"class="nav__links">Manzanas</a></li>
+                <li class="nav__items"><a href="{{route('apple')}}"class="nav__links">Manzanas</a></li>
                 <li class="nav__items"><a href="#service"class="nav__links">Municipios</a></li>
                 <li class="nav__items"><a href=""class="nav__links">Categorias</a></li>
                 <li class="nav__items"><a href=""class="nav__links">Servicios</a></li>

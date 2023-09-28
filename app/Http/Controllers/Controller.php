@@ -12,15 +12,15 @@ class Controller extends BaseController
 
     public function solicitudservicies()
     {
-        return view('servicerequest'); // retornar la vista que quiero mostrar
+        return view('ViewsAdmin.servicerequest'); // retornar la vista que quiero mostrar
     }
-    public function manzanas()
+    public function apple()
     {
         return view('ViewsAdmin.apple'); // retornar la vista que quiero mostrar
     }
-    public function establecimientos()
+    public function establishment()
     {
-        return view('establishment'); // retornar la vista que quiero mostrar
+        return view('ViewsAdmin.establishment'); // retornar la vista que quiero mostrar
     }
 }
 
