@@ -28,7 +28,7 @@
     <table id="solicitudTable" class="display">
         <thead>
             <tr>
-                <th>ID</th>
+                <th hidden>ID</th>
                 <th>Manzana</th>
                 <th>Servicio</th>
                 <th>Fecha/Hora</th>
@@ -39,7 +39,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
+                <td hidden>1</td>
                 <td class="manzana" data-id="1">Azul</td>
                 <td>Educación superior</td>
                 <td>7/01/2024</td>

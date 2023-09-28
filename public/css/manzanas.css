@@ -1,11 +1,4 @@
-
-/* Estilo del cuerpo */
-.body {
-    font-family: Arial, sans-serif; /* Fuente de texto principal */
-    background-color: #f2f2f2; /* Color de fondo del cuerpo */
-    margin: 100px; /* Margen de 100px en todos los lados */
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 /* Estilo para el encabezado (h1) */
 h1 {
     text-align: center; /* Centra el texto */
@@ -14,6 +7,7 @@ h1 {
     margin:30px; /* Margen superior para separar del mapa */
     background-color: #743f6c; /* Cambia el fondo del título para hacerlo más visible */
     padding: 20px; /* Añade un espacio de relleno al título */
+    margin: 10px auto; /* Reduce el margen superior */
 }
 /* Estilo para la tabla */
 .solicitudTable {
@@ -47,22 +41,3 @@ tr:nth-child(even) {
     background-color: #f2f2f2; /* Color de fondo de filas pares */
 } 
 
-/* Estilos para el contenedor del botón PDF */
-.dataTables_wrapper .pdf-button-container {
-    text-align: center; /* Centrar el contenido horizontalmente */
-    margin-bottom: 20px; /* Espacio inferior para separar del encabezado de la tabla */
-}
-
-/* Estilos para el botón de PDF */
-.pdf-button {
-    background-color: #ff3333; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.pdf-button:hover {
-    background-color: #ff6600; /* Color de fondo al pasar el mouse */
-}
