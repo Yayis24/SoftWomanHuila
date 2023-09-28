@@ -58,6 +58,7 @@ tr:nth-child(even) {
     padding: 10px 10px; /* Espacio de relleno en el botón */
     border-radius: 5px; /* Redondeo de los bordes del botón */
     cursor: pointer; /* Cambia el cursor al pasar por encima de botón */
+    margin-bottom: 5px;
 }
 
 /* Estilo para el botón "my-button1" */
@@ -118,20 +119,24 @@ tr:nth-child(even) {
     padding: 30px; /* Añade un espacio de relleno al título */
 }
 
-/* Definir una clase CSS personalizada para el botón PDF */
-.pdf-button-custom {
-    background-color: #ee0c0c !important;
-    color: white !important;
-    border: none; /* Elimina el borde del botón */
-    padding: 10px 20px; /* Espacio de relleno en el botón (ajusta según tus necesidades) */
-    border-radius: 10px; /* Redondeo de los bordes del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-weight: bold; /* Añade negrita al texto del botón */
-    font-size: 16px; /* Tamaño de fuente del texto del botón (ajusta según tus necesidades) */
-}
 .agregar-my-button.green-button {
     background-color: green !important;
 }
+
+.custom-pdf-button {
+    background-color: #ac150a; /* Cambia esto al color de fondo deseado */
+    color: #FFFFFF; /* Cambia esto al color de texto deseado */
+    border: none; /* Si deseas eliminar el borde */
+    /* Agrega más estilos según sea necesario */
+}
+
+.custom-pdf-button:hover {
+    background-color: #ee0c0c; /* Cambia esto al color de fondo deseado */
+    color: #FFFFFF; /* Cambia esto al color de texto deseado */
+    border: none; /* Si deseas eliminar el borde */
+    outline: none;
+}
+
 
 /* Estilos para el modal de Agregar */
 .modal {
