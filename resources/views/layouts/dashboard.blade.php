@@ -1,96 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    @yield('head')
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu desplegable</title>
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
-    <!-- Agregar este elemento en la sección head de tu HTML -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 
-
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <title>Manzanas del cuidado</title>
+        <link rel="icon" href="{{ asset('images/simb.png') }}" type="image/png">
+        <link rel="shortcut icon" href="{{ asset('images/simb.png') }}" type="image/png">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
 </head>
 
 <body>
-    @yield('content')
-    <div class="nav">
 
-        <ul class="list">
-            <div class="logo-container">
-                <img src="{{ asset('images/logo-removebg-preview.png') }}" width="80" height="80" id="logo">
+    {{-- Header define el encabezado de la página  --}}
+    <header class="hero2">
+        {{-- Barra de navegacion --}}
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Cuidamos a quienes tú cuidas</h2>
             </div>
-            <li class="list__item" id="item">
-                <div class="list__button">
-                    <i class="fa-solid fa-apple-whole"></i>
-                    <a href="{{route('manzanas')}}" class="nav__link">Manzanas</a>
-                </div>
-            </li>
+            {{-- Elementos de lista de la barra de navegacion --}}
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items"><a href="#inicio"class="nav__links">Manzanas</a></li>
+                <li class="nav__items"><a href="#service"class="nav__links">Municipios</a></li>
+                <li class="nav__items"><a href=""class="nav__links">Categorias</a></li>
+                <li class="nav__items"><a href=""class="nav__links">Servicios</a></li>
+                <li class="nav__items"><a href=""class="nav__links">Solicitudes</a></li>
 
-            <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    <i class="fa-solid fa-city"></i>
-                    <a href="" class="nav__link">Municipios</a>
-                    <img src="" alt="" class="list__arrow">
-                </div>
-            </li>
+                <li class="nav__items"><a href="{{ route('logout') }}"class="nav__links">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
 
-            <li class="list__item">
-                <div class="list__button">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="" class="nav__link">Categorias</a>
-                </div>
-            </li>
+                            <a href="route('index')" class="nav__links"
+                                onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                salir
+                            </a>
+                        </form>
 
-            <li class="list__item">
-                <div class="list__button">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="" class="nav__link">Servicios</a>
-                </div>
-            </li>
-
-            <li class="list__item">
-                <div class="list__button">
-                    <i class="fa-solid fa-user"></i>
-                    <a href="" class="nav__link">Establecimientos</a>
-                </div>
-            </li>
-            
-            <li class="list__item">
-                <div class="list__button">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf <!-- Añade el token CSRF para seguridad -->
-                        <button type="submit" class="nav__link logout-button">Salir</button>
-                    </form>
-                </div>
-            </li>
-            
-            
-
+                        </i>
+                    </a>
+                </li>
+        </nav>
         </ul>
-    </div>
+    </header>
+
 </body>
-
-@yield('scripts')
-<!-- Agregar este elemento antes de cerrar el </body> de tu HTML -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
-
 
 </html>

@@ -15,3 +15,4 @@ class Type_of_service extends Model
         return $this->belongsTo(Service_Category::class);
     }
 }
+
