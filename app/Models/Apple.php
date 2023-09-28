@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Apple extends Model
 {
-    /* Relacion con el modelo de usuarios */
-    public function users()
+    use HasFactory;
+
+    public function municipalities()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(Municipality::class);
     }
 }
