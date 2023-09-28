@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceCategoryController;
+use App\Models\Service_Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +32,7 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/solicitud/servicies', [Controller::class, 'solicitudservicies'])->name('solicitud.servicies');
 Route::get('/manzanas', [Controller::class, 'manzanas'])->name('manzanas');
+Route::get('/category', [ServiceCategoryController::class, 'category'])->name('category');
 
 
 require __DIR__ . '/auth.php';

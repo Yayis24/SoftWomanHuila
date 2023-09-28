@@ -28,7 +28,6 @@
         <ul class="nav__link nav__link--menu">
             <li class="nav__items"><a href="#inicio"class="nav__links">Inicio</a></li>
             <li class="nav__items"><a href="#service"class="nav__links">Servicios</a></li>
-            <li class="nav__items"><a href=""class="nav__links">Contacto</a></li>
             <li class="nav__items"><a href="{{ route('login') }}"class="nav__links">Ingresar</i>
                 </a>
             </li>
@@ -112,7 +111,6 @@
         <li ><a href="#inicio" class="nav-link px-2 text-body-secondary">Inicio</a></li>
         <li ><a href="#service" class="nav-link px-2 text-body-secondary">Servicios</a>
         </li>
-        <li ><a href="#" class="nav-link px-2 text-body-secondary">Contactos</a></li>
         <li ><a href="{{ route('login') }}" class="nav-link px-2 text-body-secondary">Acceder</a></li>
     </ul>
     <p class="text-center text-body-secondary">&copy; 2023 - Alcaldía Mayor de Bogotá - Todos los derechos reservados.</p>
