@@ -13,13 +13,13 @@
 </head>
 
 <body class="body">
-    <h1 class="map-title">Registra los tipos de servicio</h1>
+    <h1 class="map-title">Registra las categorias de servicio</h1>
 
     <div class="container">
         <button class="my-button" onclick="openModal()">Agregar Solicitud</button>
         <div class="card">
             <div class="card-header">
-                <h2>Tipos de servicio</h2>
+                <h2>Categorias de servicio</h2>
             </div>
             <div class="card-body">
                 <table id="solicitudTable" class="display">
@@ -27,6 +27,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
+                            <th>Id Tipo de servicio</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -34,6 +35,7 @@
                         <tr>
                             <td>1</td>
                             <td>Educativo</td>
+                            <td>2</td>
                             <td>
                                 <button class="my-button1" data-id="1">Eliminar</button>
                                 <button class="my-buttoneditar">Editar</button>
@@ -60,6 +62,11 @@
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" required class="form-control">
+                            <label for="id_tiposervicio">Nombre:</label>
+                            <select name="id_tiposervicio" id="id_tiposervicio" required class="form-control">
+                                <option value="">Selecciona un tipo de servicio</option>
+                                <option value="1">Educativo</option>
+                            </select>
                         </div>
                         <div class="d-flex justify-content-center mt-3">
                             <button type="submit" class="my-button">Guardar</button>
@@ -129,11 +136,19 @@
                 responsive: true,
                 dom: 'lfrtipB',
                 buttons: [
-                    //Botón para PDF
+                    // Botón para PDF
                     {
                         extend: 'pdf',
                         title: 'Archivo PDF',
-                        text: '<button class="btn btn-danger custom-pdf-button">Exportar a PDF <i class="far fa-file-pdf"></i></button>'
+                        text: 'Exportar a PDF',
+                        className: 'btn btn-danger pdf-button',
+                        customize: function(doc) {
+                            // Ocultar las columnas en el PDF
+                            doc.content[1].table.body.forEach(function(row) {
+                                row.splice(0, 1); // Elimina la primera columna (ID)
+                                row.splice(-1, 1); // Elimina la última columna (Acciones)
+                            });
+                        }
                     }
                 ]
             });

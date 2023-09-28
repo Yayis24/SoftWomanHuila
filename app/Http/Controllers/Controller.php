@@ -10,7 +10,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function solicitudservicies()
+    public function servicerequest()
     {
         return view('ViewsAdmin.servicerequest'); // retornar la vista que quiero mostrar
     }
