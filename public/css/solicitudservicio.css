@@ -51,6 +51,14 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2; /* Color de fondo de filas pares */
 }
+.my-button {
+    background-color: #198119; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en el botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 10px; /* Espacio de relleno en el botón */
+    border-radius: 5px; /* Redondeo de los bordes del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima de botón */
+}
 
 /* Estilo para el botón "my-button1" */
 .my-button1 {

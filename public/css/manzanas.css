@@ -1,0 +1,48 @@
+
+/* Estilo del cuerpo */
+.body {
+    font-family: Arial, sans-serif; /* Fuente de texto principal */
+    background-color: #f2f2f2; /* Color de fondo del cuerpo */
+    margin: 100px; /* Margen de 100px en todos los lados */
+}
+
+/* Estilo para el encabezado (h1) */
+h1 {
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Cambia el color del texto a blanco */
+    font-size: 100%; /* Aumenta el tamaño de fuente */
+    margin:30px; /* Margen superior para separar del mapa */
+    background-color: #743f6c; /* Cambia el fondo del título para hacerlo más visible */
+    padding: 20px; /* Añade un espacio de relleno al título */
+}
+/* Estilo para la tabla */
+.solicitudTable {
+    width: 100%; /* Ancho del 100% para que la tabla ocupe todo el contenedor */
+    max-width: 600px; /* Ancho máximo de la tabla (ajusta según tus necesidades) */
+    margin: 0 auto; /* Centra la tabla horizontalmente en su contenedor */
+    border-collapse: collapse; /* Colapsa los bordes de las celdas */
+    background-color: #fff; /* Color de fondo de la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra de la tabla */
+}
+/* Estilos para celdas de la tabla (th y td) */
+th,
+td {
+    border: 1px solid #ddd; /* Borde de las celdas */
+}
+
+th,
+td {
+    padding: 15px; /* Espacio de relleno en celdas */
+    text-align: left; /* Alinea el texto a la izquierda en celdas */
+}
+
+/* Estilo para las celdas del encabezado (th) */
+th {
+    background-color: #333; /* Color de fondo de las celdas del encabezado */
+    color: #fff; /* Color del texto en celdas del encabezado */
+}
+
+/* Estilo para filas pares de la tabla */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo de filas pares */
+} 

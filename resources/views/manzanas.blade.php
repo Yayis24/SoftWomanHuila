@@ -12,15 +12,6 @@
 </head>
 
 <body class="body">
-    <h1 class="map-title">¡Encuentra Tu Manzana Más Cercana!</h1>
-    <div class="map-container">
-        <div class="gmap_canvas">
-            <iframe width="820" height="560" id="gmap_canvas"
-                src="https://maps.google.com/maps?q=Localidades+con+Manzanas+Activas&t=k&z=13&ie=UTF8&iwloc=&output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </div>
-    </div>
-
     <h1 class="text-center">Solicitud de Servicio</h1>
     <button class="my-button" onclick="openModal()">Agregar Solicitud</button>
     <br>
@@ -29,22 +20,16 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Manzana</th>
-                <th>Servicio</th>
-                <th>Fecha/Hora</th>
-                <th>Estado</th>
-                <th>Observación</th>
+                <th>Codigo</th>
+                <th>Name</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
-                <td class="manzana" data-id="1">Azul</td>
-                <td>Educación superior</td>
-                <td>7/01/2024</td>
-                <td>Aprobada</td>
-                <td>Calle 3A-14-9</td>
+                <td>id</td>
+                <td>980023</td>
+                <td>Ciudad de chapinero</td>
                 <td>
                     <button class="my-button1">Eliminar</button>
                 </td>
@@ -60,15 +45,11 @@
             <form id="formularioAgregar">
                 <label for="manzana">Manzana:</label>
                 <input type="text" id="manzana" name="manzana" required>
-                <label for="servicio">Servicio:</label>
-                <input type="text" id="servicio" name="servicio" required>
-                <label for="fecha">Fecha/Hora:</label>
-                <input type="text" id="fecha" name="fecha" required>
+                <label for="Codigo">Codigo:</label>
+                <input type="text" id="codigo" name="servicio" required>
+                <label for="Nombre">Nombre</label>
+                <input type="text" id="nombre" name="fecha" required>
                 <label for="estado">Estado:</label>
-                <input type="text" id="estado" name="estado" required>
-                <label for="observacion">Observación:</label>
-                <div class="d-flex justify-content-center">
-                <input type="text" id="observacion" name="observacion">
                 <button type="submit" class="my-button">Guardar</button>
             </div>
             </form>
@@ -121,3 +102,4 @@
 </body>
 
 </html>
+

@@ -14,4 +14,8 @@ class Controller extends BaseController
     {
         return view('solicituddeservicio'); // retornar la vista que quiero mostrar
     }
+    public function manzanas()
+    {
+        return view('manzanas'); // retornar la vista que quiero mostrar
+    }
 }
