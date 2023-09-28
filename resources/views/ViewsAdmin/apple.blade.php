@@ -14,45 +14,61 @@
 
 <body>
     <h1 class="text-center">Registra las Manzanas</h1>
-    <button class="my-button" onclick="openModal()">Agregar Solicitud</button>
-    <br>
-    <br>
-    <table id="solicitudTable" class="display">
-        <thead>
-            <tr>
-                <th hidden>ID</th>
-                <th>Codigo</th>
-                <th>Name</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td hidden>id</td>
-                <td>980023</td>
-                <td>Ciudad de chapinero</td>
-                <td>
-                    <button class="my-button1">Eliminar</button>
-                    <button class="my-buttoneditar">Editar</button>
-                </td>
-            </tr>
-            <!-- Agrega más filas según sea necesario -->
-        </tbody>
-    </table>
-
+    <div class="container">
+        <button class="my-button" onclick="openModal()">Agregar Solicitud</button>
+        <div class="card">
+            <div class="card-header">
+                <h2>Manzanas</h2>
+            </div>
+            <div class="card-body">
+                <table id="solicitudTable" class="display">
+                    <thead>
+                        <tr>
+                            <th hidden>ID</th>
+                            <th>Codigo</th>
+                            <th>Name</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td hidden>id</td>
+                            <td>980023</td>
+                            <td>Ciudad de chapinero</td>
+                            <td>
+                                <button class="my-button1">Eliminar</button>
+                                <button class="my-buttoneditar">Editar</button>
+                            </td>
+                        </tr>
+                        <!-- Agrega más filas según sea necesario -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <div id="modal" class="modal">
-        <div class="modal-contenido">
-            <i class="fas fa-times cerrar" onclick="closeModal()"></i>
-            <h2>Agregar Solicitud de Servicio</h2>
-            <form id="formularioAgregar">
-                <label for="id">ID:</label>
-                <input type="text" id="id" name="id" required>
-                <label for="Codigo">Codigo:</label>
-                <input type="text" id="codigo" name="codigo" required>
-                <label for="Nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <button type="submit" class="my-button">Guardar</button>
-            </form>
+        <div class="modal-dialog modal-md"> <!-- Puedes ajustar el tamaño aquí -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Manzana</h5>
+                    <button type="button" class="close" onclick="closeModal()">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formularioAgregar" class="p-3">
+                        <div class="form-group">
+                            <label for="Codigo">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required class="form-control">
+                            <label for="Codigo">Codigo:</label>
+                            <input type="text" id="codigo" name="codigo" required class="form-control">
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button type="submit" class="my-button">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -65,6 +81,33 @@
     <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    {{-- Implementacion sweetalert --}}
+    <script>
+        // Obtén una referencia al botón por su clase o ID
+        const deleteButton = document.querySelector('.my-button1');
+
+        // Agrega un evento de clic al botón
+        deleteButton.addEventListener('click', function() {
+            // Utiliza SweetAlert para mostrar un diálogo de confirmación
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: 'Esta acción no se puede deshacer',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Aquí puedes ejecutar la lógica para eliminar el elemento
+                    // Por ejemplo, puedes hacer una solicitud AJAX para eliminarlo en el servidor
+                    // Luego, puedes mostrar un SweetAlert de éxito si la eliminación fue exitosa
+                    Swal.fire('Eliminado', 'El elemento ha sido eliminado', 'success');
+                }
+            });
+        });
+    </script>
+
 
     <script>
         function openModal() {

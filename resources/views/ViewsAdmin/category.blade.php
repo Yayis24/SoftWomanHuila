@@ -36,6 +36,7 @@
                             <td>Educativo</td>
                             <td>
                                 <button class="my-button1" data-id="1">Eliminar</button>
+                                <button class="my-buttoneditar">Editar</button>
                             </td>
                         </tr>
                         <!-- Agrega más filas según sea necesario -->
@@ -98,9 +99,7 @@
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // Aquí puedes ejecutar la lógica para eliminar el elemento
-                    // Por ejemplo, puedes hacer una solicitud AJAX para eliminarlo en el servidor
-                    // Luego, puedes mostrar un SweetAlert de éxito si la eliminación fue exitosa
+                    
                     Swal.fire('Eliminado', 'El elemento ha sido eliminado', 'success');
                 }
             });

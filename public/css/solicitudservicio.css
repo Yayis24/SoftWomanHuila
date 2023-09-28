@@ -76,8 +76,15 @@ tr:nth-child(even) {
 .my-button1:hover {
     background-color: #ee0c0c; /* Cambio de color al pasar el cursor */
 }
+.my-buttoneditar{
+    background-color: #3c22ad; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en el botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 10px; /* Espacio de relleno en el botón */
+    border-radius: 5px; /* Redondeo de los bordes del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima de botón */
+}
 
-/* Estilos para el contenedor del mapa */
 /* Estilo para el contenedor del mapa */
 .map-container {
     position: relative; /* Posición relativa */
@@ -125,16 +132,16 @@ tr:nth-child(even) {
 }
 
 .custom-pdf-button {
-    background-color: #ac150a; /* Cambia esto al color de fondo deseado */
-    color: #FFFFFF; /* Cambia esto al color de texto deseado */
-    border: none; /* Si deseas eliminar el borde */
-    /* Agrega más estilos según sea necesario */
+    background-color: #ac150a; /* color de fondo */
+    color: #FFFFFF; /* color de texto  */
+    border: none; /* eliminar el borde */
+    
 }
 
 .custom-pdf-button:hover {
-    background-color: #ee0c0c; /* Cambia esto al color de fondo deseado */
-    color: #FFFFFF; /* Cambia esto al color de texto deseado */
-    border: none; /* Si deseas eliminar el borde */
+    background-color: #ee0c0c; /* color de fondo  */
+    color: #FFFFFF; /*  color de texto  */
+    border: none; /* eliminar el borde */
     outline: none;
 }
 
@@ -165,8 +172,8 @@ tr:nth-child(even) {
     top: 10px;
     right: 10px;
     cursor: pointer;
-    font-size: 24px; /* Cambia el tamaño del icono según sea necesario */
-    color: red; /* Cambia el color del icono según sea necesario */
+    font-size: 24px; /* Cambia el tamaño del icono */
+    color: red; /* Cambia el color del icono  */
 }
 
   
